@@ -2,7 +2,7 @@
 I'll steup MSK using opstree tf module
 
 ## Setup
-* Clone the code available at [BP-TF-STEP](https://github.com/OT-BUILDPIPER-MARKETPLACE/BP-MSK-STEP)
+* Clone the code available at [BP-MSK-STEP](https://github.com/OT-BUILDPIPER-MARKETPLACE/BP-MSK-STEP)
 * Build the docker image
 
 ```
