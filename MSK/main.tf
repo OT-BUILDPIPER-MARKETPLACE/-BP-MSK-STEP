@@ -1,9 +1,15 @@
+locals {
+   vpc_id = "${var.vpc_id}"
+   subnet_ids = "${var.subnet_ids}"
+   kafka_SG_id = "${var.kafka_SG_id}"
+}
+
 module "Kafka" {
   source                         = "git::https://github.com/OT-CLOUD-KIT/terraform-aws-msk.git?ref=v0.0.2"
   name_prefix                    = var.name_prefix
-  vpc_id                         = var.vpc_id
-  subnet_ids                     = var.subnet_ids
-  kafka_SG_id                    = var.kafka_SG_id
+  vpc_id                         = local.vpc_id
+  subnet_ids                     = local.subnet_ids
+  kafka_SG_id                    = local.kafka_SG_id
   kafka_tag_value                = var.kafka_tag_value
   kafka_tag_key                  = var.kafka_tag_key
   kafka_version                  = var.kafka_version
